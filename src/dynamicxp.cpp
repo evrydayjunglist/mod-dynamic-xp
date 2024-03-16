@@ -2,7 +2,7 @@
 Credits
 Script reworked by Micrah/Milestorme and Poszer (Poszer is the Best)
 Module Created by Micrah/Milestorme
-Original Script from AshmaneCore https://github.com/conan513 Single Player Project 
+Original Script from AshmaneCore https://github.com/conan513 Single Player Project
 */
 
 #include "Configuration/Config.h"
@@ -24,7 +24,7 @@ public:
         }
     }
 
-    void OnGivePlayerXP(Player* player, uint32& amount, Unit* /*victim*/)
+    void OnGiveXP(Player* player, uint32& amount, Unit* /*victim*/, uint8 /*xpSource*/) override
     {
         if (sConfigMgr->GetOption<bool>("Dynamic.XP.Rate", true))
         {
